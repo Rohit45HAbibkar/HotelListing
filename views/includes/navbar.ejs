@@ -24,11 +24,6 @@
 
   
   
- 
-
-  
-  
-
 </style>
 
 <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
@@ -51,12 +46,12 @@
         <div class="navbar-nav ms-auto">
           <a class="nav-link" href="/listings/new"><button class="btn btn-dark">Add new Listing</button></a>
           <% if(!currUser){ %>
-           <a class="nav-link " href="/signup"><button class="btn btn-danger ok">sign-Up</button></a>
-            <a class="nav-link" href="/login"><button class="btn btn-danger ok">LogIn</button></a>
+           <a class="nav-link " href="/signup"><button class="btn btn-search ok">sign-Up</button></a>
+            <a class="nav-link" href="/login"><button class="btn btn-search ok">LogIn</button></a>
           <%}%>
           
           <% if(currUser){ %>
-            <a class="nav-link" href="/logout"><button class="btn btn-success">LogOut</button></a>
+            <a class="nav-link" href="/logout"><button class="btn btn-primary">LogOut</button></a>
          
           <%}%>
           
@@ -64,4 +59,4 @@
 
       </div>
     </div>
-  </nav>
+  </nav> 

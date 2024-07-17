@@ -50,7 +50,7 @@ main()
 
 async function main(){
     //  await mongoose.connect(MONGO_URL);
-     await mongoose.connect(dbUrl);
+      await mongoose.connect(dbUrl);
 }
 
 
@@ -79,9 +79,9 @@ const sessionOPtions={
   },
 };
 
-// app.get("/",(req,res)=>{
-//   res.send("HI I am root");
-// });
+app.get("/",(req,res)=>{
+ res.redirect("/listings");
+});
 
 
 
