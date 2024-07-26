@@ -43,22 +43,22 @@ app.engine('ejs',ejsMate);
 //for using css in ejs files
 app.use(express.static(path.join(__dirname,"/public")));
 
-const MONGO_URL="mongodb://127.0.0.1:27017/wanderlust";
+// const MONGO_URL="mongodb://127.0.0.1:27017/wanderlust";
 
-// const dbUrl=process.env.ATLASTDB_URL;
+const dbUrl=process.env.ATLASTDB_URL;
 main()
 .then(()=>{
   console.log("Connected to db");
 }).catch(err=>{console.log(err);})
 
 async function main(){
-     await mongoose.connect(MONGO_URL);
-      // await mongoose.connect(dbUrl);
+    //  await mongoose.connect(MONGO_URL);
+      await mongoose.connect(dbUrl);
 }
 
 
 const store=MongoStore.create({
-  mongoUrl:MONGO_URL,
+  mongoUrl:dbUrl,
   crypto:{
     secret:process.env.SECRET,
   },
